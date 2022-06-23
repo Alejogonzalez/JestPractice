@@ -9,7 +9,8 @@
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "cheerio": "^1.0.0-rc.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^5.16.0",
@@ -57,16 +59,21 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
+    "history": "^5.3.0",
     "jest": "^28.1.1",
+    "jest-fetch-mock": "^3.0.3",
+    "jsdom": "^19.0.0",
+    "jsdom-global": "^3.0.2",
     "prettier": "^1.19.1",
-    "webpack-dev-server": "^3.9.0",
-    "cheerio": "^1.0.0-rc.3"
+    "react-test-renderer": "^16.14.0",
+    "webpack-dev-server": "^3.9.0"
   },
   "bugs": {
     "url": "https://github.com/gndx/platzi-store/issues"
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "jest": {
+    "verbose": true,
     "setupFilesAfterEnv": [
       "<rootDir>/src/__test__/setupTest.js"
     ],
